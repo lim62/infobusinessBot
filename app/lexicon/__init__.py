@@ -1,0 +1,1 @@
+from app.lexicon.lexiconRU import lexRU
