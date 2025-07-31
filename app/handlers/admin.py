@@ -14,14 +14,12 @@ async def cmd_start(msg: Message) -> None:
 @admin_router.callback_query(F.data == 'contacts')
 async def call_contacts(call: CallbackQuery) -> None:
     contacts = db.get_data('users')
-    print(contacts)
     if contacts:
         is_fulled: bool = False
         for contact in contacts:
             if contact[-1]:
                 is_fulled = True
                 break
-        print(is_fulled)
         if is_fulled:
             await call.message.edit_text(lexRU.text.contacts, reply_markup=get_cancel_markup())
             for contact in contacts:
