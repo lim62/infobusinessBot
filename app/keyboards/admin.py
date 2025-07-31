@@ -5,10 +5,7 @@ def get_start_markup() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=
                                     [
                                         [
-                                            InlineKeyboardButton(text=lexRU.button.mailing, callback_data='mailing'),
-                                            InlineKeyboardButton(text=lexRU.button.contacts, callback_data='contacts')
-                                        ],
-                                        [
+                                            InlineKeyboardButton(text=lexRU.button.contacts, callback_data='contacts'),
                                             InlineKeyboardButton(text=lexRU.button.database, callback_data='database')
                                         ]
                                     ]
